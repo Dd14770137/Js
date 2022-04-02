@@ -4,6 +4,13 @@
 -->
 # js in es6
 
+### 自动执行函数
+```js
+(function(a){
+    console.log(a);
+})('相当于参数')
+```
+
 ###promise
 > promise 有三个resolved 拒绝 rejected 连接 pending 成功 fulfilled
 ```js

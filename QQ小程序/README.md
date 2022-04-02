@@ -9,11 +9,20 @@ const util = require('../../utils/util.js')
 ```
 ### 修改数据尽量使用setDate
 ```js
+    // 异步更新
     this.setData({对象})
+    // 同步更新
+    this.data({});
+
+    // ps 直接修改 this.data 而不调用 this.setData 
+    // 是无法改变页面的状态的，还会造成数据不一致。
 ```
 
 ```js
 App({
+  onLoad(options) {
+    // 在页面加载时进行一些初始化。
+  },
   onLaunch(options) {
     // 第一次启动
   },
@@ -72,4 +81,10 @@ Page({
   <import src="test.qml"/>
   <template is="test" data="{{text:'123'}}"></template>
   <include src="../template/test.qml"/>
+```
+
+### api
+```js
+// 显示页面路径
+ console.log(this.route)
 ```
